@@ -12,7 +12,7 @@ const Header = () => {
                     Depression.
                 </p>
                 <h3>How to use it ?</h3>
-                <p> The user need to answer the given 15 question politel
+                <p> The user need to answer the given questions politely
                     in the range between 0-10. While user is answering, simultaneously 
                     report is generated which calculte the score of the depression.
                     This score will compared to some predefined threshold and based on that

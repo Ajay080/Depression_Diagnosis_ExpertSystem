@@ -124,6 +124,9 @@ const DepressionDiagnosis = () => {
     else if(calculateScore()>=15){
         return 'You may be experiencing moderate depression and should consider seeking professional help.'
     }
+    else if(calculateScore()==0){
+      return 'You do not have any depression'
+    }
     else{
         return 'You may be experiencing mild depression, and it is recommended to take self-care measures or consult a healthcare professional'
     }
