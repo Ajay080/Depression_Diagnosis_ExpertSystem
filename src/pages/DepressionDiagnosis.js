@@ -5,7 +5,7 @@ const DepressionDiagnosis = () => {
     {
       name: "Feeling sad or having a depressed mood",
       bias: 0.4,
-      threshold: 5,
+      threshold: 4,
     },
     {
       name: "Loss of interest or pleasure in activities once enjoyed",
@@ -15,77 +15,77 @@ const DepressionDiagnosis = () => {
     {
       name: "Changes in appetite - weight loss or gain unrelated to dieting",
       bias: 0.6,
-      threshold: 5,
+      threshold: 4,
     },
     {
       name: "Trouble sleeping or sleeping too much",
       bias: 0.1,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Loss of energy or increased fatigue",
       bias: 0.1,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Feeling worthless or guilty",
       bias: 0.6,
-      threshold: 5,
+      threshold: 1,
     },
     {
       name: "Feeling helpless or hopeless",
       bias: 0.3,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "loss of self confidence",
       bias: 0.8,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Feeling irritable",
       bias: 0.4,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Decreased Appetite",
       bias: 0.3,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Decreased Sex Drive",
       bias: 0.5,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Feeling Disconnected with Others",
       bias: 0.7,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Feeling overwhelmed",
       bias: 0.4,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Unexplained Physical System",
       bias: 1,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Feeling Anxious",
       bias: 0.7,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Difficulty Functioning at Work or School",
       bias: 0.8,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Argument or Fights with better half",
       bias: 0.7,
-      threshold: 5,
+      threshold: 3,
     },
     {
       name: "Difficulty thinking, concentrating, making decisions",
@@ -100,7 +100,7 @@ const DepressionDiagnosis = () => {
     {
       name: "Thoughts of harming yourself or other",
       bias: 0.8,
-      threshold: 3,
+      threshold: 1,
     },
 
   ]);
@@ -121,7 +121,7 @@ const DepressionDiagnosis = () => {
     if(calculateScore()>= 30){
         return 'You may be experiencing severe depression and should seek professional help immediately.'
     }
-    else if(calculateScore()>=12){
+    else if(calculateScore()>=15){
         return 'You may be experiencing moderate depression and should consider seeking professional help.'
     }
     else{
