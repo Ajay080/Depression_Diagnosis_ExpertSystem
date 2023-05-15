@@ -4,64 +4,105 @@ const DepressionDiagnosis = () => {
   const [symptoms, setSymptoms] = useState([
     {
       name: "Feeling sad or having a depressed mood",
-      bias: 1,
+      bias: 0.4,
       threshold: 5,
     },
     {
       name: "Loss of interest or pleasure in activities once enjoyed",
-      bias: 1,
+      bias: 0.2,
       threshold: 5,
     },
     {
       name: "Changes in appetite - weight loss or gain unrelated to dieting",
-      bias: 1,
+      bias: 0.6,
       threshold: 5,
     },
     {
       name: "Trouble sleeping or sleeping too much",
-      bias: 1,
+      bias: 0.1,
       threshold: 5,
     },
     {
       name: "Loss of energy or increased fatigue",
-      bias: 1,
+      bias: 0.1,
       threshold: 5,
     },
     {
       name: "Feeling worthless or guilty",
+      bias: 0.6,
+      threshold: 5,
+    },
+    {
+      name: "Feeling helpless or hopeless",
+      bias: 0.3,
+      threshold: 5,
+    },
+    {
+      name: "loss of self confidence",
+      bias: 0.8,
+      threshold: 5,
+    },
+    {
+      name: "Feeling irritable",
+      bias: 0.4,
+      threshold: 5,
+    },
+    {
+      name: "Decreased Appetite",
+      bias: 0.3,
+      threshold: 5,
+    },
+    {
+      name: "Decreased Sex Drive",
+      bias: 0.5,
+      threshold: 5,
+    },
+    {
+      name: "Feeling Disconnected with Others",
+      bias: 0.7,
+      threshold: 5,
+    },
+    {
+      name: "Feeling overwhelmed",
+      bias: 0.4,
+      threshold: 5,
+    },
+    {
+      name: "Unexplained Physical System",
       bias: 1,
       threshold: 5,
     },
     {
+      name: "Feeling Anxious",
+      bias: 0.7,
+      threshold: 5,
+    },
+    {
+      name: "Difficulty Functioning at Work or School",
+      bias: 0.8,
+      threshold: 5,
+    },
+    {
+      name: "Argument or Fights with better half",
+      bias: 0.7,
+      threshold: 5,
+    },
+    {
       name: "Difficulty thinking, concentrating, making decisions",
-      bias: 1,
+      bias: 0.3,
       threshold: 5,
     },
     {
       name: "Thoughts of death or suicide",
       bias: 1,
-      threshold: 5,
-    },
-    {
-      name: "Recurrent thoughts about death or suicide",
-      bias: 2,
-      threshold: 4,
+      threshold: 1,
     },
     {
       name: "Thoughts of harming yourself or other",
-      bias: 3,
+      bias: 0.8,
       threshold: 3,
     },
-    {
-      name: "Attempting suicide",
-      bias: 4,
-      threshold: 2,
-    },
-    {
-      name: "Succeeding in suicide",
-      bias: 5,
-      threshold: 1,
-    },
+
   ]);
 
   const calculateScore = () => {
