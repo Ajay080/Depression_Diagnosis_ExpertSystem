@@ -68,13 +68,13 @@ const DepressionDiagnosis = () => {
       threshold: 3,
     },
     {
-      name: "Unexplained Physical System",
+      name: "Unexplained Physical Conditions",
       bias: 1,
       threshold: 3,
     },
     {
       name: "Feeling Anxious",
-      bias: 0.7,
+      bias: 0.5,
       threshold: 3,
     },
     {
@@ -124,13 +124,13 @@ const DepressionDiagnosis = () => {
     else if(calculateScore()<=13){
       return 'You are not at all under any condition of experiencing depression However there may be some situatiions where you are feeling bit pressure kindly Avoid that situations'
     }
-    else if(calculateScore()>=15 && calculateScore()<=22){
+    else if(calculateScore()>13 && calculateScore()<=22){
       return 'You may be experiencing mild depression, and it is recommended to take self-care measures or consult a healthcare professional'
     }
-    else if(calculateScore()>=23 && calculateScore()<=35){
+    else if(calculateScore()>22 && calculateScore()<=35){
       return 'You may be experiencing moderate depression and should consider seeking professional help.'
     }
-    else if(calculateScore()>= 30){
+    else if(calculateScore()> 35){
         return 'You may be experiencing severe depression and should seek professional help immediately.'
     }
   } 

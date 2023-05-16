@@ -17,6 +17,8 @@ const Header = () => {
                     report is generated which calculates the score of the depression.
                     This score will compare to some predefined threshold and based on that
                     The system will respond with Diagnosis and Advice.
+                    <br/>
+                    Note: Use 0 as Neutral or Base for clearly declining any symptom.
                 </p>
 
             </div>
