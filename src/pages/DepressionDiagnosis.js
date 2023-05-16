@@ -10,7 +10,7 @@ const DepressionDiagnosis = () => {
     {
       name: "Loss of interest or pleasure in activities once enjoyed",
       bias: 0.2,
-      threshold: 5,
+      threshold: 4,
     },
     {
       name: "Changes in appetite - weight loss or gain unrelated to dieting",
@@ -94,7 +94,7 @@ const DepressionDiagnosis = () => {
     },
     {
       name: "Thoughts of death or suicide",
-      bias: 30,
+      bias: 20,
       threshold: 0,
     },
     {
@@ -153,7 +153,7 @@ const DepressionDiagnosis = () => {
                   value={symptom.rating}
                   onChange={(e) => setSymptoms((prevSymptoms) => {
                     const newSymptoms = [...prevSymptoms];
-                    if(e.target.value>10){
+                    if(e.target.value>10 ){
                         e.target.value=10;
                     }
                     newSymptoms[symptoms.indexOf(symptom)] = {
