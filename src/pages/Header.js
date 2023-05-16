@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import depre from './depre.jpg';
+import depre from './Img/depre.jpg';
 
 const Header = () => {
   return (
@@ -12,16 +12,16 @@ const Header = () => {
                     Depression.
                 </p>
                 <h3>How to use it ?</h3>
-                <p> The user need to answer the given questions politely
-                    in the range between 0-10. While user is answering, simultaneously 
-                    report is generated which calculte the score of the depression.
-                    This score will compared to some predefined threshold and based on that
-                    The system will respond with Diagnosis and advice.
+                <p> The user need to answer the below questions politely
+                    in the range between 0-10. While user is answering, simultaneous
+                    report is generated which calculates the score of the depression.
+                    This score will compare to some predefined threshold and based on that
+                    The system will respond with Diagnosis and Advice.
                 </p>
 
             </div>
             <div className="Header-right">
-                <img src={depre}/>
+                <img src={depre} alt="Depression"/>
             </div>
         </div>
     </div>

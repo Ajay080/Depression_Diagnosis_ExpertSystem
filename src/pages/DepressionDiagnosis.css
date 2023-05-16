@@ -1,9 +1,8 @@
 .container{
     margin: 2% auto;
     display: flex;
-    /* flex-direction: co; */
     justify-content: center ;
-    padding:0 1rem;
+    padding:4rem 1rem;
 }
 .left, .right{
     margin: 0 3rem;
@@ -14,17 +13,14 @@
     width:400px;
     padding:10px 10px;
 }
-/* .container h1{
-    color:white;
-    margin-left:0;
-} */
+
 .card{
     border:2px solid black;
     margin:2% 0;
     padding:2% 3%;
     border-radius:10px;
     background: rgb(255, 255, 255);
-    background-image: url("./back1.jpg");
+    background-image: url("./Img/back1.jpg");
     color:white;
     box-shadow: 10px 5px 5px rgb(101, 98, 98);
 }
@@ -48,7 +44,7 @@
 }
 .right{
     border-radius: 10px;
-    background-image: url("./back1.jpg");
+    background-image: url("./Img/back1.jpg");
     padding:3px 40px;
     color:white;
     justify-content: center;

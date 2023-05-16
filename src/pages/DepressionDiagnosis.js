@@ -80,7 +80,7 @@ const DepressionDiagnosis = () => {
     {
       name: "Difficulty Functioning at Work or School",
       bias: 0.8,
-      threshold: 3,
+      threshold: 4,
     },
     {
       name: "Argument or Fights with better half",
@@ -94,12 +94,12 @@ const DepressionDiagnosis = () => {
     },
     {
       name: "Thoughts of death or suicide",
-      bias: 1,
-      threshold: 1,
+      bias: 30,
+      threshold: 0,
     },
     {
       name: "Thoughts of harming yourself or other",
-      bias: 0.8,
+      bias: 2,
       threshold: 1,
     },
 
@@ -118,23 +118,25 @@ const DepressionDiagnosis = () => {
   };
 
   const val= ()=>{
-    if(calculateScore()>= 30){
+    if(calculateScore()===0){
+      return 'You do not have any depression.'
+    }
+    else if(calculateScore()<=13){
+      return 'You are not at all under any condition of experiencing depression However there may be some situatiions where you are feeling bit pressure kindly Avoid that situations'
+    }
+    else if(calculateScore()>=15 && calculateScore()<=22){
+      return 'You may be experiencing mild depression, and it is recommended to take self-care measures or consult a healthcare professional'
+    }
+    else if(calculateScore()>=23 && calculateScore()<=35){
+      return 'You may be experiencing moderate depression and should consider seeking professional help.'
+    }
+    else if(calculateScore()>= 30){
         return 'You may be experiencing severe depression and should seek professional help immediately.'
-    }
-    else if(calculateScore()>=15){
-        return 'You may be experiencing moderate depression and should consider seeking professional help.'
-    }
-    else if(calculateScore()==0){
-      return 'You do not have any depression'
-    }
-    else{
-        return 'You may be experiencing mild depression, and it is recommended to take self-care measures or consult a healthcare professional'
     }
   } 
 
   return (
     <div  className="container">
-              {/* <h1>Depression Diagnosis</h1> */}
     <div className="left">
         {symptoms.map((symptom) => (
             <div className="card" key={symptom.name}>
@@ -165,34 +167,11 @@ const DepressionDiagnosis = () => {
               </div>
             </div>
         ))}
-
-      {/* <ul>
-        {symptoms.map((symptom) => (
-          <li key={symptom.name}>
-            {symptom.name}
-            <input
-              type="number"
-              min="0"
-              max="10"
-              value={symptom.rating}
-              onChange={(e) => setSymptoms((prevSymptoms) => {
-                const newSymptoms = [...prevSymptoms];
-                newSymptoms[symptoms.indexOf(symptom)] = {
-                  ...symptom,
-                  rating: e.target.value,
-                };
-                return newSymptoms;
-              })}
-            />
-          </li>
-        ))}
-      </ul> */}
       </div>
       <div className="right">
         <h2>Score : {calculateScore()}</h2>
         <hr/>
         <h3>Diagnosis</h3>
-        {/* {calculateScore() > 10 ? "Depressed" : "Not Depressed"} */}
         <p>{val()}</p>
       </div>
     </div>
