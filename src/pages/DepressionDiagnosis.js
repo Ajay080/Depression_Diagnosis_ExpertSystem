@@ -4,102 +4,102 @@ const DepressionDiagnosis = () => {
   const [symptoms, setSymptoms] = useState([
     {
       name: "Feeling sad or having a depressed mood",
-      bias: 0.4,
+      weight: 0.4,
       threshold: 4,
     },
     {
       name: "Loss of interest or pleasure in activities once enjoyed",
-      bias: 0.2,
+      weight: 0.2,
       threshold: 4,
     },
     {
       name: "Changes in appetite - weight loss or gain unrelated to dieting",
-      bias: 0.6,
+      weight: 0.6,
       threshold: 4,
     },
     {
       name: "Trouble sleeping or sleeping too much",
-      bias: 0.1,
+      weight: 0.1,
       threshold: 3,
     },
     {
       name: "Loss of energy or increased fatigue",
-      bias: 0.1,
+      weight: 0.1,
       threshold: 3,
     },
     {
       name: "Feeling worthless or guilty",
-      bias: 0.6,
+      weight: 0.6,
       threshold: 1,
     },
     {
       name: "Feeling helpless or hopeless",
-      bias: 0.3,
+      weight: 0.3,
       threshold: 3,
     },
     {
       name: "loss of self confidence",
-      bias: 0.8,
+      weight: 0.8,
       threshold: 3,
     },
     {
       name: "Feeling irritable",
-      bias: 0.4,
+      weight: 0.4,
       threshold: 3,
     },
     {
       name: "Decreased Appetite",
-      bias: 0.3,
+      weight: 0.3,
       threshold: 3,
     },
     {
       name: "Decreased Sex Drive",
-      bias: 0.5,
+      weight: 0.5,
       threshold: 3,
     },
     {
       name: "Feeling Disconnected with Others",
-      bias: 0.7,
+      weight: 0.7,
       threshold: 3,
     },
     {
       name: "Feeling overwhelmed",
-      bias: 0.4,
+      weight: 0.4,
       threshold: 3,
     },
     {
       name: "Unexplained Physical Conditions",
-      bias: 1,
+      weight: 1,
       threshold: 3,
     },
     {
       name: "Feeling Anxious",
-      bias: 0.5,
+      weight: 0.5,
       threshold: 3,
     },
     {
       name: "Difficulty Functioning at Work or School",
-      bias: 0.8,
+      weight: 0.8,
       threshold: 4,
     },
     {
       name: "Argument or Fights with better half",
-      bias: 0.7,
+      weight: 0.7,
       threshold: 3,
     },
     {
       name: "Difficulty thinking, concentrating, making decisions",
-      bias: 0.3,
+      weight: 0.3,
       threshold: 5,
     },
     {
       name: "Thoughts of death or suicide",
-      bias: 20,
+      weight: 20,
       threshold: 0,
     },
     {
       name: "Thoughts of harming yourself or other",
-      bias: 2,
+      weight: 2,
       threshold: 1,
     },
 
@@ -110,7 +110,7 @@ const DepressionDiagnosis = () => {
 
     for (const symptom of symptoms) {
       if (symptom.rating > symptom.threshold) {
-        score += symptom.bias*[symptom.rating-symptom.threshold];
+        score += symptom.weight*[symptom.rating-symptom.threshold];
       }
     }
 
@@ -155,6 +155,9 @@ const DepressionDiagnosis = () => {
                     const newSymptoms = [...prevSymptoms];
                     if(e.target.value>10 ){
                         e.target.value=10;
+                    }
+                    else if(e.target.value<0){
+                      e.target.value=0;
                     }
                     newSymptoms[symptoms.indexOf(symptom)] = {
                       ...symptom,
